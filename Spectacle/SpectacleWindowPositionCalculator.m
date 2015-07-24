@@ -47,6 +47,12 @@
     if (MovingToThirdOfDisplay(action)) {
         calculatedWindowRect = [SpectacleWindowPositionCalculator findThirdForWindowRect: calculatedWindowRect visibleFrameOfScreen: visibleFrameOfScreen withAction: action];
     }
+    
+    calculatedWindowRect.origin.x += SpectacleUselessGap;
+    calculatedWindowRect.origin.y += SpectacleUselessGap;
+    calculatedWindowRect.size.width -= 2*SpectacleUselessGap;
+    calculatedWindowRect.size.height -= 2*SpectacleUselessGap;
+
 
     return [SpectacleCalculationResult resultWithAction: action windowRect: calculatedWindowRect];
 }
@@ -105,6 +111,11 @@
         calculatedWindowRect = windowRect;
     }
 
+    calculatedWindowRect.size.height -= 2*SpectacleUselessGap;
+    calculatedWindowRect.size.width -= 2*SpectacleUselessGap;
+    calculatedWindowRect.origin.x -= SpectacleUselessGap;
+    calculatedWindowRect.origin.y -= SpectacleUselessGap;
+    
     return [SpectacleCalculationResult resultWithAction: action windowRect: calculatedWindowRect];
 }
 
@@ -161,6 +172,11 @@
             break;
         }
     }
+    
+    result.origin.x += SpectacleUselessGap;
+    result.origin.y += SpectacleUselessGap;
+    result.size.width -= 2*SpectacleUselessGap;
+    result.size.height -= 2*SpectacleUselessGap;
 
     return result;
 }
@@ -210,6 +226,11 @@
             return [SpectacleCalculationResult resultWithAction: SpectacleWindowActionNextThird windowRect: twoThirdRect];
         }
     }
+    
+    oneHalfRect.origin.x += SpectacleUselessGap;
+    oneHalfRect.origin.y += SpectacleUselessGap;
+    oneHalfRect.size.width -= 2*SpectacleUselessGap;
+    oneHalfRect.size.height -= 2*SpectacleUselessGap;
 
     return [SpectacleCalculationResult resultWithAction: action windowRect: oneHalfRect];
 }
@@ -250,6 +271,11 @@
             return [SpectacleCalculationResult resultWithAction: SpectacleWindowActionNextThird windowRect: twoThirdsRect];
         }
     }
+    
+    oneHalfRect.origin.x += SpectacleUselessGap;
+    oneHalfRect.origin.y += SpectacleUselessGap;
+    oneHalfRect.size.width -= 2*SpectacleUselessGap;
+    oneHalfRect.size.height -= 2*SpectacleUselessGap;
 
     return [SpectacleCalculationResult resultWithAction: action windowRect: oneHalfRect];
 }

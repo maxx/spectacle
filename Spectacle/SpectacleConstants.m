@@ -61,6 +61,7 @@ const NSInteger SpectacleEscapeKey = 53;
 #pragma mark -
 
 const CGFloat SpectacleWindowSizeOffset = 30.0f;
+const CGFloat SpectacleUselessGap = 10.0f;
 
 const CGFloat SpectacleMinimumWindowSizeRatio = 4.0f;
 

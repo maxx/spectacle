@@ -59,7 +59,7 @@ extern const NSInteger SpectacleEscapeKey;
 #pragma mark -
 
 extern const CGFloat SpectacleWindowSizeOffset;
-
+extern const CGFloat SpectacleUselessGap;
 extern const CGFloat SpectacleMinimumWindowSizeRatio;
 
 #pragma mark -
